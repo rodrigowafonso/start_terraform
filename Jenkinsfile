@@ -8,7 +8,7 @@ pipeline {
             steps {
 
                 git url: 'git@github.com:rodrigowafonso/start_terraform.git', branch: 'main'
-                sh 'echo funcionando'
+                echo 'Funcionando!!!'
                 sh 'ls -la'
             }
 

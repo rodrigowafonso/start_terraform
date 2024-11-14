@@ -9,9 +9,10 @@ resource "aws_instance" "srv_devops_tf" {
   subnet_id = aws_subnet.subnet_start_tf.id
   vpc_security_group_ids = [aws_security_group.sg_start_tf.id] 
   associate_public_ip_address = true
-
+  
   tags = {
     Name = var.instancia_ec2_nome
+    Projeto = "Devops"
   }
 }
 
