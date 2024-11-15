@@ -32,7 +32,7 @@ pipeline {
                 script {
 
                     sh 'terraform fmt'
-                    sh 'terraform init -backend-config="bucket=$AWS_NAME_BUCKET" -backend-config="key=$AWS_TERRAFORM_TFSTATE_START" -backend-config="region=$AWS_REGION"'
+                    sh 'terraform init -migrate-state -backend-config="bucket=$AWS_NAME_BUCKET" -backend-config="key=$AWS_TERRAFORM_TFSTATE_START" -backend-config="region=$AWS_REGION"'
                     sh 'terraform plan -auto-approve'
                     sh 'terraform apply -auto-approve'
 
