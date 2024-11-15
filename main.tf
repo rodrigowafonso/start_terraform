@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "rwa-terraform-jenkins"
-    key = "start/tf/terraform_tfstate"
-    region = "us-east-1"
-
+    # bucket = "rwa-terraform-jenkins"
+    # key = "start/tf/terraform_tfstate"
+    # region = "us-east-1"
+    # Integrado e utilizando as variáveis de ambiente no Jenkins
   }
 }
 
